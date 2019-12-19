@@ -13,7 +13,7 @@ public class JMTraceClassAdapter extends ClassVisitor {
 
     @Override
     public MethodVisitor visitMethod(int access, String name, String desc, String signature, String[] exceptions) {
-        if (name.startsWith("java") || name.startsWith("sun") || name.startsWith("com")) return cv.visitMethod(access, name, desc, signature, exceptions);
+        if (name.startsWith("java") || name.startsWith("sun")) return cv.visitMethod(access, name, desc, signature, exceptions);
         MethodVisitor mv = cv.visitMethod(access, name, desc, signature, exceptions);
         mv = new JMTraceMethodAdapter(mv);
         return mv;

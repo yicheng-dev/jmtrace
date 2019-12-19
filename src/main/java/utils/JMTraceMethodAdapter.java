@@ -98,7 +98,7 @@ public class JMTraceMethodAdapter extends MethodVisitor {
 
     @Override
     public void visitFieldInsn(int opcode, String owner, String name, String desc) {
-        if (owner.startsWith("java") || owner.startsWith("sun") || owner.startsWith("com")) {
+        if (owner.startsWith("java") || owner.startsWith("sun")) {
             mv.visitFieldInsn(opcode, owner, name, desc);
             return;
         }
