@@ -2,8 +2,8 @@
 
 ## Build & Run
 
-- Build: `$ mvn package` (then `jmtrace-1.0.jar` will be generated)
-- Run: `$ java -javaagent:[path to jmtrace-1.0.jar] -jar [path to your jar]`
+- Build: `$ mvn package` (then `jmtrace-1.0-jar-with-dependencies.jar` will be generated)
+- Run: `$ java -javaagent:[path to jmtrace-1.0-jar-with-dependencies.jar] -jar [path to your jar]`
 
 ## Description
 
